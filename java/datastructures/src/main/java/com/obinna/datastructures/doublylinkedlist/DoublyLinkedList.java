@@ -4,9 +4,9 @@ package com.obinna.datastructures.doublylinkedlist;
  * Implements a DoublyLinkedList
  * Created by obi on 2017-05-16.
  */
-public class DoublyLinkedList<T> {
-    private DLListNode<T> first;
-    private DLListNode<T> last;
+public class DoublyLinkedList<E> {
+    private DLListNode<E> first;
+    private DLListNode<E> last;
     private int size;
     private boolean empty;
 
@@ -16,7 +16,7 @@ public class DoublyLinkedList<T> {
         this.empty = true;
     }
 
-    public DoublyLinkedList(DLListNode<T> first) {
+    public DoublyLinkedList(DLListNode<E> first) {
         this.first = this.last = first;
         this.first.setNext(null);
         this.first.setPrev(null);
@@ -24,7 +24,7 @@ public class DoublyLinkedList<T> {
         this.empty = false;
     }
 
-    public DoublyLinkedList(DLListNode<T> first, DLListNode<T> last) {
+    public DoublyLinkedList(DLListNode<E> first, DLListNode<E> last) {
         this.first = first;
         this.last = last;
         this.first.setNext(last);
@@ -35,19 +35,19 @@ public class DoublyLinkedList<T> {
         this.empty = false;
     }
 
-    public DLListNode<T> getFirst() {
+    public DLListNode<E> getFirst() {
         return first;
     }
 
-    public void setFirst(DLListNode<T> first) {
+    public void setFirst(DLListNode<E> first) {
         this.first = first;
     }
 
-    public DLListNode<T> getLast() {
+    public DLListNode<E> getLast() {
         return last;
     }
 
-    public void setLast(DLListNode<T> last) {
+    public void setLast(DLListNode<E> last) {
         this.last = last;
     }
 
@@ -58,7 +58,7 @@ public class DoublyLinkedList<T> {
     public void setSize(int size) {
         // Do nothing here
         // So as to make the list's size immutable,
-        // to prevent its alteration from outside code
+        // to prevent its alteration from outside
     }
 
     public boolean isEmpty() {
@@ -78,7 +78,7 @@ public class DoublyLinkedList<T> {
      *
      * @param newElement the new element to be added to the list
      */
-    public void add(DLListNode<T> newElement) {
+    public void add(DLListNode<E> newElement) {
         if(this.empty) {
             this.first = this.last = newElement;
             this.first.setNext(null);
@@ -108,10 +108,10 @@ public class DoublyLinkedList<T> {
     public void reverse1() {
         // Do nothing if the list is empty or has only 1 element
         if(this.size > 1) {
-            DLListNode<T> currElement = this.first;
+            DLListNode<E> currElement = this.first;
             while(currElement.getNext() != null) {
-                DLListNode<T> tempNewPrev = currElement.getNext();
-                DLListNode<T> tempNewNext = currElement.getPrev();
+                DLListNode<E> tempNewPrev = currElement.getNext();
+                DLListNode<E> tempNewNext = currElement.getPrev();
                 if(currElement == this.first) {
                     currElement.setNext(null);
                     currElement.setPrev(tempNewPrev);
@@ -137,10 +137,10 @@ public class DoublyLinkedList<T> {
      */
     public void reverse2() {
         if(this.size > 1) {
-            DLListNode<T> currElement = this.last;
+            DLListNode<E> currElement = this.last;
             while(currElement.getPrev() != null) {
-                DLListNode<T> tempNewNext = currElement.getPrev();
-                DLListNode<T> tempNewPrev = currElement.getNext();
+                DLListNode<E> tempNewNext = currElement.getPrev();
+                DLListNode<E> tempNewPrev = currElement.getNext();
                 if(currElement == this.last) // make last become first
                 {
                     currElement.setPrev(null);
@@ -160,7 +160,7 @@ public class DoublyLinkedList<T> {
 
     public void printList() {
         if(!this.empty) {
-            DLListNode<T> currElement = this.first;
+            DLListNode<E> currElement = this.first;
             while(currElement != null) {
                 System.out.print(currElement.getValue().toString() + " ");
                 currElement = currElement.getNext();

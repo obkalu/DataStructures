@@ -4,46 +4,46 @@ package com.obinna.datastructures.doublylinkedlist;
  * ListNode for a DoublyLinkedList.
  * Created by obi on 2017-05-16.
  */
-public class DLListNode<T> {
+public class DLListNode<E> {
 
-    private DLListNode<T> next;
-    private DLListNode<T> prev;
-    private T value;
+    private DLListNode<E> next;
+    private DLListNode<E> prev;
+    private E value;
 
     public DLListNode() {
     }
 
-    public DLListNode(T value) {
+    public DLListNode(E value) {
         this.value = value;
     }
 
-    public DLListNode(DLListNode<T> next, DLListNode<T> prev, T value) {
+    public DLListNode(DLListNode<E> next, DLListNode<E> prev, E value) {
         this.next = next;
         this.prev = prev;
         this.value = value;
     }
 
-    public DLListNode<T> getNext() {
+    public DLListNode<E> getNext() {
         return next;
     }
 
-    public void setNext(DLListNode<T> next) {
+    public void setNext(DLListNode<E> next) {
         this.next = next;
     }
 
-    public DLListNode<T> getPrev() {
+    public DLListNode<E> getPrev() {
         return prev;
     }
 
-    public void setPrev(DLListNode<T> prev) {
+    public void setPrev(DLListNode<E> prev) {
         this.prev = prev;
     }
 
-    public T getValue() {
+    public E getValue() {
         return value;
     }
 
-    public void setValue(T value) {
+    public void setValue(E value) {
         this.value = value;
     }
 }
