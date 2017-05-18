@@ -101,15 +101,6 @@ public class DoublyLinkedList<T> {
     /**
      * Reverses the order of the elements in the DoublyLinkedList
      * so that the first element becomes the last, and the last element
-     * becomes the first
-     */
-    public void reverse0() {
-        //
-    }
-
-    /**
-     * Reverses the order of the elements in the DoublyLinkedList
-     * so that the first element becomes the last, and the last element
      * becomes the first.
      * This version, 1, of the reverse method, proceeds by traversing the
      * DoublyLinkedList starting from the first to the last.
