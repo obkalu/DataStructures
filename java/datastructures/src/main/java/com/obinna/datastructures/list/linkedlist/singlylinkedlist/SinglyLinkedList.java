@@ -1,8 +1,11 @@
-package com.obinna.datastructures.singlylinkedlist;
+package com.obinna.datastructures.list.linkedlist.singlylinkedlist;
 
 /**
+ * SinglyLinkedList
+ *
  * Created by obi on 2017-05-17.
  */
+@SuppressWarnings("ALL")
 public class SinglyLinkedList<E> {
 
     private SLListNode<E> first;
@@ -80,7 +83,7 @@ public class SinglyLinkedList<E> {
     }
 
     /**
-     * Reverses the order of the elements in the DoublyLinkedList
+     * Reverses the order of the elements in the SinglyLinkedList
      * so that the first element becomes the last, and the last element
      * becomes the first
      */

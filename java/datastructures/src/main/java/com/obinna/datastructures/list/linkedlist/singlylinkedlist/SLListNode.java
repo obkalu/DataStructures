@@ -1,9 +1,10 @@
-package com.obinna.datastructures.singlylinkedlist;
+package com.obinna.datastructures.list.linkedlist.singlylinkedlist;
 
 /**
  * ListNode for a SinglyLinkedList.
  * Created by obi on 2017-05-17.
  */
+@SuppressWarnings("ALL")
 public class SLListNode<E> {
 
     private SLListNode<E> next;
@@ -23,15 +24,15 @@ public class SLListNode<E> {
         this.value = value;
     }
 
-    public SLListNode<E> getNext() {
+    SLListNode<E> getNext() {
         return next;
     }
 
-    public void setNext(SLListNode<E> next) {
+    void setNext(SLListNode<E> next) {
         this.next = next;
     }
 
-    public E getValue() {
+    E getValue() {
         return value;
     }
 

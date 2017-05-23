@@ -1,14 +1,18 @@
 package com.obinna.datastructures;
 
-import com.obinna.datastructures.doublylinkedlist.DLListNode;
-import com.obinna.datastructures.doublylinkedlist.DoublyLinkedList;
-import com.obinna.datastructures.singlylinkedlist.SLListNode;
-import com.obinna.datastructures.singlylinkedlist.SinglyLinkedList;
+import com.obinna.datastructures.list.linkedlist.doublylinkedlist.DLListNode;
+import com.obinna.datastructures.list.linkedlist.doublylinkedlist.DoublyLinkedList;
+import com.obinna.datastructures.list.linkedlist.singlylinkedlist.SLListNode;
+import com.obinna.datastructures.list.linkedlist.singlylinkedlist.SinglyLinkedList;
+import com.obinna.datastructures.list.arraylist.ArrayList;
 
 /**
+ * DataStructuresConsoleApp
+ * A simple Java console app to demo/test the datastructure classes
+ *
  * Created by obi on 2017-05-16.
  */
-public class DataStructuresConsoleApp {
+class DataStructuresConsoleApp {
 
     public static void main(String[] args) {
         // Create a DoublyLinkedList of the integers: 1, 2, 3.
@@ -31,26 +35,40 @@ public class DataStructuresConsoleApp {
         singlyLinkedList.add(five);
         singlyLinkedList.add(six);
 
-        // Print the doublyLinkedlist
+        // Create an ArrayList of integers.
+//        ArrayList<Integer> arrayList = new ArrayList<>();
+//        ArrayList<Integer> arrayList = new ArrayList<>(3);
+        ArrayList<Integer> arrayList = new ArrayList<>(new Integer[]{4, 5, 6, 13});
+        arrayList.add(7);
+        arrayList.add(8);
+        arrayList.add(9);
+
+        // Print the doublyLinkedList
         doublyLinkedList.printList();
-        // Now reverse the doublyLinkedlist
+        // Now reverse the doublyLinkedList
         doublyLinkedList.reverse1();
-        // Print the reversed doublyLinkedlist
+        // Print the reversed doublyLinkedList
         doublyLinkedList.printList();
-        // Now reverse the doublyLinkedlist back again, using reverse2
+        // Now reverse the doublyLinkedList back again, using reverse2
         doublyLinkedList.reverse2();
-        // Print the doublyLinkedlist once again
+        // Print the doublyLinkedList once again
         doublyLinkedList.printList();
 
-        // Print the singlyLinkedlist
+        // Print the singlyLinkedList
         singlyLinkedList.printList();
-        // Now reverse the singlyLinkedlist
+        // Now reverse the singlyLinkedList
         singlyLinkedList.reverse();
-        // Print the reversed singlyLinkedlist
+        // Print the reversed singlyLinkedList
         singlyLinkedList.printList();
-        // Now reverse the singlyLinkedlist back again
+        // Now reverse the singlyLinkedList back again
         singlyLinkedList.reverse();
-        // Print the singlyLinkedlist once again
+        // Print the singlyLinkedList once again
         singlyLinkedList.printList();
+
+        // Print the arrayList
+        arrayList.printList();
+        arrayList.add(10);
+        arrayList.reverse();
+        arrayList.printList();
     }
 }

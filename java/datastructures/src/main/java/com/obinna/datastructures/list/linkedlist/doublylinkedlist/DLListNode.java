@@ -1,9 +1,10 @@
-package com.obinna.datastructures.doublylinkedlist;
+package com.obinna.datastructures.list.linkedlist.doublylinkedlist;
 
 /**
  * ListNode for a DoublyLinkedList.
  * Created by obi on 2017-05-16.
  */
+@SuppressWarnings("ALL")
 public class DLListNode<E> {
 
     private DLListNode<E> next;
@@ -23,23 +24,23 @@ public class DLListNode<E> {
         this.value = value;
     }
 
-    public DLListNode<E> getNext() {
+    DLListNode<E> getNext() {
         return next;
     }
 
-    public void setNext(DLListNode<E> next) {
+    void setNext(DLListNode<E> next) {
         this.next = next;
     }
 
-    public DLListNode<E> getPrev() {
+    DLListNode<E> getPrev() {
         return prev;
     }
 
-    public void setPrev(DLListNode<E> prev) {
+    void setPrev(DLListNode<E> prev) {
         this.prev = prev;
     }
 
-    public E getValue() {
+    E getValue() {
         return value;
     }
 

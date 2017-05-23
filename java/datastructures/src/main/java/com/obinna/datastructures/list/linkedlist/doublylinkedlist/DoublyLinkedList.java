@@ -1,9 +1,10 @@
-package com.obinna.datastructures.doublylinkedlist;
+package com.obinna.datastructures.list.linkedlist.doublylinkedlist;
 
 /**
  * Implements a DoublyLinkedList
  * Created by obi on 2017-05-16.
  */
+@SuppressWarnings("ALL")
 public class DoublyLinkedList<E> {
     private DLListNode<E> first;
     private DLListNode<E> last;
@@ -55,21 +56,21 @@ public class DoublyLinkedList<E> {
         return this.size;
     }
 
-    public void setSize(int size) {
-        // Do nothing here
-        // So as to make the list's size immutable,
-        // to prevent its alteration from outside
-    }
+//    public void setSize(int size) {
+//        // Do nothing here
+//        // So as to make the list's size immutable,
+//        // to prevent its alteration from outside
+//    }
 
     public boolean isEmpty() {
         return this.empty;
     }
 
-    public void setEmpty(boolean empty) {
-        // Do nothing here
-        // So as to make the list's size immutable,
-        // to prevent its alteration from outside code
-    }
+//    public void setEmpty(boolean empty) {
+//        // Do nothing here
+//        // So as to make the list's size immutable,
+//        // to prevent its alteration from outside code
+//    }
 
     // List operations methods
 
