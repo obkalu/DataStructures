@@ -151,12 +151,14 @@ public class ArrayList<E> {
 
     /**
      * Reverses the order of the elements in the ArrayList such that the first
-     * becomes the last and the last becomes the first. This version of the reverse method
+     * becomes the last and the last becomes the first.
+     * This version of the reverse method
      * reverses the arrayList by traversing its elements from the last to the first.
      */
     public void reverse() {
-        // Do nothing if ArrayList is empty or has only one element
-        if(this.currentIndex >= 0) {
+        // Do this only if the ArrayList contains more than 1 elements.
+        // i.e. Do nothing if ArrayList is empty or has only one element.
+        if(this.currentIndex > 0) {
             // Make an array of same capacity
             Object[] newArray = new Object[this.capacity];
             // Transfer all existing elements in reverse order
@@ -170,12 +172,13 @@ public class ArrayList<E> {
 
     /**
      * Reverses the order of the elements in the ArrayList such that the first
-     * becomes the last and the last becomes the first. This version of the reverse method
+     * becomes the last and the last becomes the first.
+     * This version of the reverse method
      * reverses the arrayList by traversing its elements from the first to the last.
      */
     public void reverse2() {
         // Do nothing if ArrayList is empty or has only one element
-        if(this.currentIndex >= 0) {
+        if(this.currentIndex > 0) {
             // Make an array of same capacity
             Object[] newArray = new Object[this.capacity];
             // Transfer all existing elements in reverse order
@@ -188,8 +191,23 @@ public class ArrayList<E> {
     }
 
     /**
-     * Prints out the all the elements contained in the ArrayList
-     * in order of index from first to last
+     * Reverses the order of the elements in the ArrayList such that the first
+     * becomes the last and the last becomes the first.
+     * This version of the reverse method (i.e. in-place reversing)
+     * reverses the arrayList, without creating a new array object and transferring the
+     * elements but rather by swapping its elements, in-place, from the first to the last.
+     */
+    public void reverseInPlace() {
+        // Do this only if the ArrayList contains more than 1 elements.
+        // i.e. Do nothing if ArrayList is empty or has only one element.
+        if(this.currentIndex > 0) {
+            // TODO
+        }
+    }
+
+    /**
+     * Prints-out all the elements contained in the ArrayList
+     * in order of their index from first to last
      */
     public void printList() {
         if(!this.empty) {

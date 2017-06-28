@@ -36,12 +36,17 @@ class DataStructuresConsoleApp {
         singlyLinkedList.add(six);
 
         // Create an ArrayList of integers.
+        // Test-case 1: Create an empty ArrayList
 //        ArrayList<Integer> arrayList = new ArrayList<>();
-//        ArrayList<Integer> arrayList = new ArrayList<>(3);
-        ArrayList<Integer> arrayList = new ArrayList<>(new Integer[]{4, 5, 6, 13});
+
+        // Test-case 2: Create an ArrayList with initial capacity of 3
+        ArrayList<Integer> arrayList = new ArrayList<>(3);
         arrayList.add(7);
         arrayList.add(8);
         arrayList.add(9);
+
+        // Test-case 3: Create an ArrayList from a given feeder_array
+//        ArrayList<Integer> arrayList = new ArrayList<>(new Integer[]{4, 5, 6, 13});
 
         // Print the doublyLinkedList
         doublyLinkedList.printList();
@@ -67,7 +72,7 @@ class DataStructuresConsoleApp {
 
         // Print the arrayList
         arrayList.printList();
-        arrayList.add(10);
+//        arrayList.add(10);
         arrayList.reverse();
         arrayList.printList();
     }
