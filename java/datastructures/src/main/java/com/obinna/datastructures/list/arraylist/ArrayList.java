@@ -193,15 +193,24 @@ public class ArrayList<E> {
     /**
      * Reverses the order of the elements in the ArrayList such that the first
      * becomes the last and the last becomes the first.
-     * This version of the reverse method (i.e. in-place reversing)
+     * This version of the reverse method is done in-place as it
      * reverses the arrayList, without creating a new array object and transferring the
-     * elements but rather by swapping its elements, in-place, from the first to the last.
+     * elements, but rather by swapping its elements positions, in-place, from the first
+     * to the last.
      */
     public void reverseInPlace() {
-        // Do this only if the ArrayList contains more than 1 elements.
+        // Do this only if the ArrayList contains more than 1 element.
         // i.e. Do nothing if ArrayList is empty or has only one element.
         if(this.currentIndex > 0) {
-            // TODO
+            // Read the first element and hold it in temp, to become the last
+            // at the end of the iteration
+            int n = this.currentIndex;
+            for (int i = 0; i < n; i++) {
+                Object temp = this.array[n];
+                this.array[n] = this.array[i];
+                this.array[i] = temp;
+                --n;
+            }
         }
     }
 
