@@ -4,7 +4,7 @@ package com.obinna.datastructures.list.linkedlist.doublylinkedlist;
  * Implements a DoublyLinkedList
  * Created by obi on 2017-05-16.
  */
-@SuppressWarnings("ALL")
+//@SuppressWarnings("ALL")
 public class DoublyLinkedList<E> {
     private DLListNode<E> first;
     private DLListNode<E> last;
@@ -59,7 +59,8 @@ public class DoublyLinkedList<E> {
 //    public void setSize(int size) {
 //        // Do nothing here
 //        // So as to make the list's size immutable,
-//        // to prevent its alteration from outside
+//        // to prevent its alteration from outside.
+//        // Since the List maintains and keeps track of its own size internally
 //    }
 
     public boolean isEmpty() {

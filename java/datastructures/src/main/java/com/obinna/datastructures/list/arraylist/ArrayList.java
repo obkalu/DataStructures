@@ -41,12 +41,12 @@ public class ArrayList<E> {
             this.full = false;
             this.size = currentIndex+1;
         } else {
-            throw new IllegalArgumentException("Capacity must be non-negative integer");
+            throw new IllegalArgumentException("Capacity must be a non-negative integer");
         }
     }
 
     /**
-     * Creates an ArrayList and populates it with data from specified feeder-array
+     * Creates a new Array and populates it with data from specified feeder-array
      * @param feeder_array the specified feeder-array
      */
     public ArrayList(Object[] feeder_array) {
@@ -134,7 +134,7 @@ public class ArrayList<E> {
             Object[] newArray = new Object[this.capacity];
             int nextIndexStart = this.array.length;
             // Transfer all existing elements to the newArray
-            // Consider using System.arraycopy()
+            // Consider using System.arraycopy(...) or Arrays.copyOf(...)
             for (int i = 0; i < nextIndexStart; i++) {
                 newArray[i] = this.array[i];
             }

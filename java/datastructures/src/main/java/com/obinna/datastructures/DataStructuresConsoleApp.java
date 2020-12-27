@@ -46,34 +46,44 @@ class DataStructuresConsoleApp {
 //        arrayList.add(9);
 
         // Test-case 3: Create an ArrayList from a given feeder_array
-        ArrayList<Integer> arrayList = new ArrayList<>(new Integer[]{4, 5, 6, 13, 0, 2, 97});
+        ArrayList<Integer> arrayList = new ArrayList<>(new Integer[]{4, 5, 6, 13, 0, 2, 97, 15});
 
         // Print the doublyLinkedList
+        System.out.println("Doubly-linked List:");
         doublyLinkedList.printList();
         // Now reverse the doublyLinkedList
         doublyLinkedList.reverse1();
         // Print the reversed doublyLinkedList
+        System.out.println("Doubly-linked List reversed:");
         doublyLinkedList.printList();
         // Now reverse the doublyLinkedList back again, using reverse2
         doublyLinkedList.reverse2();
         // Print the doublyLinkedList once again
+        System.out.println("Doubly-linked List re-reversed:");
         doublyLinkedList.printList();
+        System.out.println();
 
         // Print the singlyLinkedList
+        System.out.println("Singly-linked List:");
         singlyLinkedList.printList();
         // Now reverse the singlyLinkedList
         singlyLinkedList.reverse();
         // Print the reversed singlyLinkedList
+        System.out.println("Singly-linked List reversed:");
         singlyLinkedList.printList();
         // Now reverse the singlyLinkedList back again
         singlyLinkedList.reverse();
         // Print the singlyLinkedList once again
+        System.out.println("Singly-linked List re-reversed:");
         singlyLinkedList.printList();
+        System.out.println();
 
         // Print the arrayList
+        System.out.println("Array List:");
         arrayList.printList();
 //        arrayList.add(10);
         arrayList.reverseInPlace();
+        System.out.println("Array List reversed:");
         arrayList.printList();
     }
 }
